@@ -1,3 +1,3 @@
 # ExcelZeroToHero
 
-### basic data manipulation functions, including LOOKUPS, pivots, etc..
+### Data manipulation functions including LOOKUPS, pivots, etc..
