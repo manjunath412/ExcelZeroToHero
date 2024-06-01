@@ -1,0 +1,92 @@
+Playstore:
+New spreadsheet
+From Data, Open base_stats.csv and import
+This helps import as a table
+Chose data type detection
+Load Data
+Now on the same sheet, do get data and import adv_stats.csv
+Same chose datatype, look at data and other options on the step
+Load the new csv data
+This gets loaded into data sheet
+Spend a few minutes looking at the data across the 2
+Return to adv_stats.csv sheet
+Select all the column names (1st row) and ctrl+c (copy)
+Go to previous sheet
+And copy column at the end of the existing columns
+JOIN:
+Using VLOOKUP
+Study the syntax - basically, u look up for a value from the current sheet, on the joining sheet, select the index of the column value you want to fetch from the joining sheet in excel index starts at 1 and not 0; so we want category which is 2, lastly we want exact match
+So the ex: syntax we develop will be something like: VLOOKUP($A2, Sheet3!$A$2:$B$265, 2, FALSE)
+Repeat the exercise for install column
+For type column, we will use INDEX function and MATCH within - to look up value in array, row_numn and column_val. The MATCH will bring the first value that was an exact match
+INDEX(Sheet3!$E2:E$265, MATCH($A2, Sheet3!A$2:A$265,0))
+Repeat for rest of columns
+Convert last_updated datatype to short_date
+Aggregated funcs - average rating, total reviews, average_review_per_app which is total_reviews / count(reviews)
+Count free apps - COUNTIF(free/paid column, “Free”)
+
+Car Sales (Power Query):
+This time from data, select sales_data.xlsx
+This workbook has 2 sheets, select shop_sales 1st, and load
+Next select emp_id.xlsx to load, here u have sheet 1
+Since it does not have column names, we will select transform instead of load data
+In the power query editor, we will click on transform → use first row as headers
+The row gets transformed, we will name is employee table. Then close and load from menu
+It will load the data into new sheet in the car sales workbook
+Next we will load prod_id.csv; here too we will fix the column names by clicking on transform like previous and we will call it product table, close and load
+Now we will join these 3 tables on 3 sheets using combine queries → merge
+Do the merge from shop_sales On merge, we will have shop_sales_data
+We will select product table from 2nd drop down, and click on product columns from the 2 sections and we will select inner join
+This will now open the powerquery editor. Click on the product table icon at the top, and select p_code column we want to include in the join.
+Next we will rename the column name to product id
+We can as is customary drag and move the id column next to date.
+We will give the name merged_sales_data for this query, and close and load
+This will now take us back to the car sales spreadsheet and show on a new sheet
+We can do a similar join but experiment with different join types on the employee table
+
+Wide form to long form (wide_form_honey_production.csv)
+We will just open the csv directly
+We save as Honey Production.xlsx
+Copy the content from the 1st sheet into another sheet, add the State header for state column
+After selecting all the data on the sheet, insert → create table and ok
+We can experiment with a couple of recommended charts for the 1st 2 columns
+We will go back to original data sheet
+We can do alt + d + p to open pivot table or go from menu (insert pivot table)
+Create single page field for me (this is basically the field to summarize on or groupby in technical term)
+We will add this to a new worksheet
+A new pivot table is added to a new sheet, we can see the grand total here. If you right click on the grand total and click show details, the data will be converted to long form 
+We can delete the page1 column since it is of no use. We can also see the auto header naming for the 1st 3 columns
+Company Financials xls (Pivot Table more..):
+Start with the sheet where the company financials data is present
+Insert → pivot table, select table/range as financials (all data should be selected)
+Creates a new pivottable on a new sheet
+Let us say we want to summarize by product, so drag it into rows and see the corresponding change on the spreadsheet
+We can drag and drop say country into the filter area, and see the corresponding change on the spreadsheet
+We now want to summarize the units sold by product. So we will drag the sum of units sold into the the values area
+We can also similarly drag the sale price to the values area
+Lastly, we will drag the profit column into the values!
+We can also aggregate in different way. If we double click on profit column and select sum and see the change after ok
+Sale price we change to average (by double clicking)
+The product dropdown can be further filtered
+Play around with country filter, etc..
+
+Sales Rep Numbers:
+Choose open file monthly_sales → table1
+This is in wide form - every column is separate month, so click on transform
+On the power query editor, select sales rep column, right click and unpivot other columns
+And you will see the 2 column transformation
+Rename the month column to month, and units sold for 3rd column
+This shows how to unpivot pivoted form of data (wide), we can call it unpivot table
+Close and load
+Now we can go back to original pivot data sheet, add a new row, just copy paste and save sheert/workbook
+Now if we go back to unpivoted sheet, we can click on the icon next to the table name, and refresh. This refreshes the data automatically
+
+Partition Data, cumulative sum, running total and rankoperations (Coffee Sales Metrics);
+We will need to sort by store name, and next level date
+Select all the data on the sheet, from menu data → SubTotal, and select sales from the dialog box. See the result for each store
+Insert a new column cumulative sale at the end of the table
+Do the formula for 1st 2 rows of sales, and then drag drop; do similar for each store
+We will now create 2 cells with store and revenue_rank, copy the store names under store
+Under the revenue_rank column, we will use RANK(<the value we want to rank>, <the values against which we want to rank>, <ascending or desc>) 0 is desc
+
+
