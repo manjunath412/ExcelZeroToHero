@@ -1,3 +1,4 @@
+*****This file helps with playstore*.csv, sales_data.xlsx, honeyproduction.csv, monthly_sales, coffee_sales*****
 Playstore:
 New spreadsheet
 From Data, Open base_stats.csv and import
