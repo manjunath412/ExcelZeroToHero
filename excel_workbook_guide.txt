@@ -88,6 +88,6 @@ Select all the data on the sheet, from menu data → SubTotal, and select sales 
 Insert a new column cumulative sale at the end of the table
 Do the formula for 1st 2 rows of sales, and then drag drop; do similar for each store
 We will now create 2 cells with store and revenue_rank, copy the store names under store
-Under the revenue_rank column, we will use RANK(<the value we want to rank>, <the values against which we want to rank>, <ascending or desc>) 0 is desc
+Under the revenue_rank column, we will use RANK(<the value we want to rank>, <the values against which we want to rank including the cell of the value we are ranking>, <ascending or desc>) 0 is desc
 
 
