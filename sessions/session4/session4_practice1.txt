@@ -1,0 +1,20 @@
+- use session4_practice1
+- load rentals table into power query
+- select title and artist name and capitalize each word
+- add space after comma and colons in artist name and title columns values by using replace values
+- similar to prev session, where we split comma-delimit to rows, now we will do item# and split it into 2 by split column and delimiter is space
+- rename the new columns
+- change data type of upc, isbn to text and retail to currency
+- remove BTkey column by just press delete :)
+- make sure release dae=te is datetime
+- make duplicate columns (a few)
+- then explore multiple date transformation options
+- add calculated column after loading teams worksheet into powerquery
+- the new column calculates win record for each team during the season
+- call it Wpct and the formula is [W] / ([W] + [L])
+- close and load data
+- inspect wpct
+- but the average from pivot may not be accurate, we will revisit later
+- go back to session_practice1.xlsx, and we will unpivot/melt the sales columns. we will select the customer channel and region, and select (right click) unpivot other columns
+- rename the attribute and value column as department and sales
+- go to pivottable and explore
