@@ -1,0 +1,5 @@
+- use session1_practice2
+- capitalize each column header by using formula reference
+- create new column bill_ration = bill_length_mm/bill_depth_mm
+- add total row and calculate average body_mass_g
+- remove banded table row styling 
