@@ -1,0 +1,55 @@
+Power Query
+Excel is not reproducible - see steps in powerquery
+Excel does not have a native null value. So to handle missing values, we may use different approaches like deleting the record or 0 or putting NA in the field. Powerquery helps address this by using a dedicated “null” to represent missing data
+Excel can’t process > 1 million rows - this is true with excel, but powerquery can be used to summarize, aggregate within its editor before loading to excel
+ETL: 
+Extract: from various data sources
+Transform: sorting, filtering, cleaning, datatyping, merging, reshaping(adding/dropping columns or pivoting/unpivoting/transposing) or adding an index column - try it out..
+Load: Close and Load loads a table
+The formula bar is M language we will come to this later
+Data Profiling:
+Data accuracy, evident issues, 
+Is the purpose /measurement of the variables (columns and values) clear?
+Necessary data available and clear?
+Any formula/calculated fields and if so are they good or errored?
+Use Data Preview in the View menu
+Expert tip: original table is blue, transformed is green
+Transforming rows:
+Remove rows menu item (duplicate, null, removals)
+Spitting data into rows (adding index prior to this might give better meaning)
+Use fill down (to replace values from adjacent)
+Transforming columns:
+Column case
+Data type (we can create a new data type later, advanced)
+Replace values
+Split column across
+Date transformations are many and awesome
+Add custom columns with formula
+Also check out close and load to
+Pivot and unpivot (“melt”)
+merging/appending queries
+Maybe filter the case file into separate xls by month
+Then append query the 3 monthly xls (UNION)
+Inner join/left and right outer
+Managing queries:
+Group queries
+Query dependencies
+
+Power Pivot
+Relational data modeling and analysis, construct dashboards and analysis using pivot tables from the data model
+Familiar with the trajectory from VLOOKUP to Power Query
+Scenario based usage of power query vs power pivot, power query helpful with granularity, 1-off situations, prep-work, simplifications, (ex: monthly sales figures, etc..)
+For larger datasets and more sophisticated analysis move to power pivot
+Power pivot data modeling creates relationship across tables through the model
+XLOOKUP is next incarnation of VLOOKUP but is still memory intensive, and columns are still looked up one at a time
+Power query is easier to maintain, and gives more control over output but need to understand relational joins and its implications well, and is still an overhead layer to load power query
+Power pivot can create more complex data models and relationships (> power query), more built-in calculations and aggregation functions. The relational modeling is still to be learned here and requires a little more learning, because of the features and is more advanced
+Since power pivot is based off data modeling first, the pivot tables can build off these data models instead of constructing and physically building those relationships
+Power Pivot is memory efficient of all the tools so far and can scale; also uses DAX language to do intricate calculations, time intelligence spanning calcs, rankings, percentiles, etc..
+Need to add-in from file → options
+Key points with power pivot are measures, KPI, data modeling(multiple sources)
+Data Modeling vocabulary:
+Fact tables - quantitative data including aggregates, 
+Dimension tables - descriptive data describing those measurements
+It is pretty common to see power query as the interim ETL layer for power pivot data modeling, i.e power query for cleaning and transform, changing data types etc.. before loading to power pivot, and use power pivot for advanced dynamic analysis across tables and models.
+Cardinality (relationships) - 1:1, 1:many, many:many is the foundation for data modeling
