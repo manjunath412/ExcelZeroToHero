@@ -1,0 +1,13 @@
+- use session2_practice1.xlsx
+- get data from table_range, 1st sheet
+- add index column from 1
+- close and load
+- load penguin
+- right click on queries and explore options
+- remove island column - this impacts query only not underlying data itself
+-  see the steps on the right side and explore
+- to go back from loaded sheet, just right click on query and edit
+- data profiling using view menu on query editor
+- explore data preview checkboxes
+- column profiling
+- turn off data preview/view
