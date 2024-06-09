@@ -1,0 +1,11 @@
+-use session2_practice2
+- load data with power query
+- name query as computers
+- add index column from 1
+- rename previous added step as "added unique identifier"
+- drag and drop index column to be 1st
+- data profiling on the entire dataset
+	- range of computer prices
+	- average RAM
+	- missing values
+- load query results into pivot table and explore
