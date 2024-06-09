@@ -1,0 +1,8 @@
+- use session4_practice2
+- transform date column to month format (January, for ex)
+- transform owner column to proper case
+- split location column into 2- zip and state
+- reshape dataset so subscription_cost, support_cost and services_cost are consolidated into category and cost
+- add new column tax = 7% of cost column values
+- convert zip variable to text data type and update cost and tax to currency
+- load results into table
