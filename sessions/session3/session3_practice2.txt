@@ -1,0 +1,6 @@
+- use session3_practice2
+- on states worksheet, remove united states row from data
+- fill down blanks on region and division columns
+- sort by population desc
+- load results into pivottable and explore
+- on midewest_cities worksheet, load data into table where each city is in own row
