@@ -1,0 +1,11 @@
+- use session3_practice1.xlsx
+- remove missing values by remove rows --> remove blank rows, explore other options
+- remove duplicates maybe relevant
+- name is typo which is a silly example of domain knowledge needed for certain data cleanup
+- close and load
+- split roster data into rows (contrast powerquery split with regular excel split) by column delimiter
+- trim spaces
+- fill sales sheet header and cell values
+- 1st row header and rename
+- then fill down column null values
+- 
