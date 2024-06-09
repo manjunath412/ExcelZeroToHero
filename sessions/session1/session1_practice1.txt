@@ -1,0 +1,23 @@
+- use session1_practice1.xlsx
+- create table (Insert Menu --> Table or ctrl+T)
+- copy column headers from right side and replace auto generated column headers
+- Explore Table Design --> Total Row, and other checkbox under style
+- notice what happens when you click on total row to the subtotal, and behavior in other total row columns
+- also notice insert slicer other options out there on the ribbon
+- rename Table Name to whatever you want where you change this maybe dependent on the version you have
+- key forumulae:
+	=Table1[#Headers]
+	=Table1
+	=Table1[#Totals]
+	=Table1[#All]
+- you can always ctrl+Z to undo previous step
+- we will do some advanced ways to refer to cells
+- organizing data for data analytics
+	- wide form to long form, and tidy-set rules
+	- tidy-set rules: 
+		- try to have variables as columns rather than variable values for columns as here - have a department variable instead of fresh, grocery and frozeon
+		- and a variable (count) to represent the counts that are currently shown for each of those columns
+	- how do we unpivot/melt:
+		- load table data in power query (for selected range)
+		- select /highlight the columns to keep and right click and unpivot other columns
+		- rename the columns and you end up with tidy data that is organized for data analytics
