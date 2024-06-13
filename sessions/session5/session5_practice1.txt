@@ -1,0 +1,13 @@
+- use section5_people_born_in_usa, section5_people_born_outside_usa, session5_hof_inductions
+- select born_in_usa and born_outside_usa
+- load to each and select connection only (not the table, also review other options)
+- right click on born_in_usa connection, on the power query editor, append queries as new
+- select two tables, explore 3 or more table option
+- rename append1 to people_append
+- load hof_inductions.csv
+- select the people_append in the power query, and merge queries as new
+- do left outer join between people_append and hof on player_id - remember this is a more fancy/robust way of vlookup where instead of #N/A, we get null on non-matches
+- result merge rename as people_left
+- repeat with people_append and hof_inductions but this time as inner join
+- manage our queries by grouping them: select born_in_usa, outside_usa and hof_inductions and move to new group - sources
+- view query_dependencies

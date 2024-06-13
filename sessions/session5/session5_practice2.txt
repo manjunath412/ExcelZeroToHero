@@ -1,0 +1,4 @@
+- use session5_ewr-flights_practice, session5_jfk-flights_practice, session5_lga-flights_practice
+- append all the three using 3 or more
+- merge the new appended query with session5_planes_practice2 with a left outer join and another inner join (merge based on tailnum)
+- grouping queries and view dependencies
