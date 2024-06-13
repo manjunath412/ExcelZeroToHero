@@ -1,0 +1,7 @@
+- section6_practice2
+- load batting, people, and hof into power pivot via power query, do relationships, etc.
+- identify facts and dimension tables, organize models in diagram view (remember STAR schema where facts is the center of attention :))
+- describe the cardinality of the relationships
+- use SWITCH to create new is_player column in hof table, if category = 'Player' then Yes else No
+- create birth hierarchy in people table using birthcountry, state and city
+- load data model results into pivottable, count # of players
