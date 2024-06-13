@@ -1,0 +1,51 @@
+- use section6_practice1
+- new workbook
+- load data to, create connection and add data to data model - repeat for each sheet
+- create relationship from order to returns and users on order_id and region
+- orders is our facts table, while users can be considered dimension table (since manager associated with a region) and similarly returns but maybe lesser extent
+- load as pivottable, make sure to explore the different menu options
+- similar pivot table interface but fields grouped by data model category
+- drag region to rows
+- move sales to values
+- above you will see how the inter-table aggregation by recognizing the relationship
+- formatting values can be done by going back to power pivot home --> data view
+- select sales and format to currency, explore any other options
+- exit from power pivot back to pivot table sheet
+- add region to filters
+- result is the filter propogated from users to order
+- we can do similar relationship propogation by removing older sales and adding manager from users to rows
+- go back to power pivot editor --> data view --> orders
+- create new calculated column - profit margin --> orders[Profit]/orders[Sales] ( this is our baby step to DAX programming)
+- save and load model into new pivot table
+- customer segment to rows, average of profit margin to values, sum of profit, sum of sales
+- now add a new column to verify next to average profit margin, and do the division and see there is a discrepancy - keep it in parking lot, we will come back to this (remember to use relative cell reference here)
+- random but helpful feature here: use SWITCH as a case statement to assign numbers to different customer segments. syntax: =SWITCH(orders[Customer Segment], "Consumber", "1", "Corporate", "2', "Unknown", ")
+- do the above switching in the data view of orders, and come back and see the changes in the pivot table view
+- where feasible use SWITCH fo performance issues and a better alt to IF
+- onto some beloved hierarchying: (useful when we want to do country --> state --> city, etc..)
+	- go to diagram view --> ctrl select product category, sub-cat, name and right click and create hierarchy --> Product Hierarchy
+	- close and return to pivottable view
+	- drag product hierarchy to rows and see the action
+- save workbook
+- open power BI
+- file --> import power query, power pivot, power view and start
+- view data model in power BI
+- a couple of basic charts
+- DAX measures to overcome discepancies earlier
+	- implicit measures: when on pivot table we have dragged and aggregated, and return back to the data model in power pivot, we see them appearing on the orders table (ex: sum of order quantity, average order quantity, etc..
+	- on power pivot --> measures --> new measures:
+		- Total Sales: =SUM(orders[Sales]); currency
+		- Similarly Total Profits and Profit Margin (Total profits]/[total sales] - see here explicit measures can be used to reference other measures
+		- after creating, go back to pivot table
+	- now let us check profit margin by region (compare explicit profit margin with formula like earlier)
+- KPIs:
+	- Create Total Sales Target explicit measure =SUM(orders[Sales Target])
+	- go to power pivot, KPI --> new KPI
+	- select KPI base field to Total Sales
+	- Measure = Total Sales Target
+	- define status thresholds and icon style
+	- next load pivot table
+	- and by region, values total sales, total sales goal with icon
+
+
+
