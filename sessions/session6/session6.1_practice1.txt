@@ -1,0 +1,14 @@
+- we will reuse session6_practice1 file (orders); make sure there is a measure total sales (sumorders[sales])
+- new measure Total Express Air Sales =CALCULATE([Total Sales], orders[Ship Mode]="Express Air"]), add it to pivot table as a value
+- new measure: Total Sales for High Priority AND Express Ship =CALCULATE([Total Sales], orders[Order Priority]="High", orders[Ship Mode]="Express Air"])
+- new measure: Total Sales for High Priority OR Express Ship =CALCULATE([Total Sales], orders[Order Priority]="High" || orders[Ship Mode]="Express Air"])
+- new measure combining calculate with ALL: All Total Sales =CALCULATE([Total Sales], ALL(Orders))
+- add new Date Table to data model
+- create new relationship between orders[order date] with date from date table (1 to many from date table to orders)
+- ***if u want to change your relationship between date and order date to date and ship date, then, you will need to use userelationship() function and chain it with calculate, only 1 date relationship can be setup at a time*****
+- pivot table out of the power pivot, and add data hierarchy(from date model) to rows and total sales (from orders) to values
+- time intelligence measure examples (on orders table):
+	- Year to date sales = TOTALYTD([Total Sales], 'Calendar'[Date]) - notice the quotes around the calendar table any difference? does it show up on the data view? etc.. etc..; anyway drag to values column this measure
+	- New measure Last Year Sales=CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Calendar'[Date])) and add to values next to ytd sales
+	- New Measure: Last year YTD sales=CALCULATE([Total Sales], DATESYTD(DATEADD('Calendar'[Date],-1, YEAR)))
+
