@@ -1,4 +1,4 @@
-- use section6_practice1
+- use session6_practice1
 - new workbook
 - load data to, create connection and add data to data model - repeat for each sheet
 - create relationship from order to returns and users on order_id and region
