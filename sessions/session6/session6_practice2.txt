@@ -1,4 +1,4 @@
-- section6_practice2
+- session6_practice2
 - load batting, people, and hof into power pivot via power query, do relationships, etc.
 - identify facts and dimension tables, organize models in diagram view (remember STAR schema where facts is the center of attention :))
 - describe the cardinality of the relationships
