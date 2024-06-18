@@ -3,17 +3,18 @@ Sub SaveMergedDataAsCSV()
     Dim csvFilePath As String
     
     ' Set the worksheet containing the merged data
-    Set ws = Worksheets("MergedData") ' Change "MergedData" to your sheet name
+    Set ws = ThisWorkbook.Sheets("Sheet1") ' Change "MergedData" to your sheet name
     
     ' Set the path and name of the CSV file
-    csvFilePath = "C:\path\to\your\folder\merged_data.csv" ' Change the path to your desired location
+    csvFilePath = "C:\Users\bmanj\Desktop\merged.csv" ' Change the path to your desired location
     
     ' Save the worksheet as CSV
     ws.Copy
     With ActiveWorkbook
-        .SaveAs Filename:=csvFilePath, FileFormat:=xlCSV, CreateBackup:=False
+        .SaveAs Filename:=csvFilePath, FileFormat:=xlCSV
         .Close False
     End With
     
     MsgBox "CSV file has been saved to " & csvFilePath
+
 End Sub
